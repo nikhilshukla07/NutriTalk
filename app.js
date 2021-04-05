@@ -74,6 +74,8 @@ function loadServices(n){
         var imga=document.createElement('a');
         imga.href="https://www.google.com";
         imga.style="text-decoration:none; color:black;";
+        imga.classList.add('servicelinks');
+        imga.target="blank";
         e.appendChild(imga);
         var eimg=document.createElement('img');
         eimg.src=serviceImages[i]

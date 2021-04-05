@@ -121,3 +121,11 @@ footer{
   height: 600px;
   background:  #008891;
 }
+.servicelinks:hover{
+  opacity: 1.0;
+}
+.mobile_images_width:hover{
+  opacity: 0.9;
+  transform: scale(1.1);
+
+}
