@@ -1,9 +1,3 @@
-
-
-
-
-
-
 serviceImages=['assets\\img\\Weight_Loss.png', 
 'assets\\img\\Weight_Gain.png', 
 'assets\\img\\THERAPEUTIC.png', 
