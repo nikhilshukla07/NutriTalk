@@ -53,10 +53,80 @@ serviceNames=["Weight Loss Nutrition Therapy",
 "Aggresion management nutrition advice",
 "Lifestyle management for adolescents",
 "Nutritoin consultancy to acid reflux"];
-var n=12;
-function loadServices(n){
-    document.querySelector(".services").innerHTML="";
 
+var pricing=[
+    500,
+    200,
+    300,
+    500,
+    100,
+    500,
+    1100,
+    500,
+    400,
+    500,
+    500,
+    800,
+    500,
+    900,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+    500,
+]
+function changeProduct()
+{
+    var e=document.querySelector("#selectPlan");
+    if(e==null)
+    return;
+    var val=e.value;
+    var i=0;
+    for(i=0;i<27;i++)
+    {
+        if(serviceNames[i]==val)
+        break;
+    }
+    e=document.querySelector(".productImage");
+    e.src=serviceImages[i];
+    e=document.querySelector(".priceBox");
+    e.innerText="Rs."+pricing[i]+"/month";
+}
+var n=12;
+function loadChoices(){
+    var par=document.querySelector("#selectPlan");
+    if(par==null)
+    return;
+    for(var i=0;i<27;i++)
+    {
+        var e=document.createElement('option');
+        e.innerText=serviceNames[i];
+        par.appendChild(e);       
+    }
+
+}
+function loadServices(n){
+
+    
+
+    if(document.querySelector(".services")!=null)
+    document.querySelector(".services").innerHTML="";
+    else{
+        return;
+    }
     for(var i=0;i<n;i++)
     {
         var e=document.createElement('div');
@@ -66,7 +136,7 @@ function loadServices(n){
         e.classList.add("col-md-2");
         e.classList.add('text-center');
         var imga=document.createElement('a');
-        imga.href="https://www.google.com";
+        imga.href="queryForm.html";
         imga.style="text-decoration:none; color:black;";
         imga.classList.add('servicelinks');
         imga.target="blank";
@@ -85,6 +155,7 @@ function loadServices(n){
     }
 }
 loadServices(12);
+loadChoices();
 function loadmoreless()
 {
     var e=document.querySelector(".loadmore");

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nutri🍎Talk | Home</title>
+    <title>Nutri🍎Talk | Services</title>
     <link rel = "icon" href = "assets/img/logo.png" type = "image/x-icon"> 
     <link rel="stylesheet" href="assets/style.css">
     <link href="assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet">
@@ -36,14 +36,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navs navbar-nav me-auto mb-2 mb-lg-0 ">
-          <li class="nav-item nav-2" style="background-color: #c6ebc9;">
+          <li class="nav-item nav-2" >
             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item nav-2">
             <a class="nav-link active" aria-current="page" href="#about">About</a>
           </li>
           <li class="nav-item nav-2">
-            <a class="nav-link active" aria-current="page" href="queryForm.html">Plans</a>
+            <a class="nav-link active" aria-current="page" href="queryForm.html" style="background-color: #c6ebc9;">Plans</a>
           </li>
           <li class="nav-item nav-2"  >
             <a class="nav-link active" aria-current="page" href="#endd" >Contact</a>
@@ -53,47 +53,48 @@
     </div>
   </nav>
   <!--Navigation Bar ends-->
-
-  <!--Hero section-->
-  <div class="hero jumbotron jumbotron-fluid">
-    <div class="hero-image">
-
-        <div class="hero-text">
-            <h1 class="display-3">Nutri🍎Talk</h1>
-            <p class="lead">The groundwork of all happiness is health</p>
-        </div>
-      </div>
-  </div>
-<!--Hero section ends-->
-<div class="about container-fluid" style="margin-bottom: -12px;">
-
-  <p class="display-3" style="padding-top: 10px;" id="about"><strong>About Us</strong></p>
-  <p class="abouttext" style="padding: 10px;">
-    "Value traditional food Don't 'Diet', switch to a healthier lifestyle instead" <br>
-
-    Pooja Maurya is a dietician/nutritionist in Vikas Nagar, Lucknow, and has experience of 6 years in this field.
-    She completed MSc in food & nutrition from K.N.I in 2014 she is a member of the National Society of India. Some of the
-    services provided by the therapist are Thyroid Diet counseling, weight loss diet counseling.
-    Chronic kidney disease(CKD) and chronic liver disease etc.
-    <br>
-    She does not believe in strict nutrition philosophies, staying unrealistic thin, or depriving yourself of the foods you love
-    rather. She encourages the use of food as medicine with a holistic approach.She believes there are only two ways to truly manage
-    weight, exercising and eating healthy. </p>
-</div>
-<section class="icon_sec_mob" id='icon_sec_mob' style=" background: #f7f3e9;">
-	<div class="container-fluid">
-  <div class="row text-center justify-content-center" >
-	  <div class="col-sm-12 col-12 col-lg-12 col-md-12">
-      <p class="display-3" style="padding-top: 10px;" id="about">Our services</p>
+  <div class="row justify-content-center text-center product">
+    <div class="col-sm-4 col-6 col-lg-2 col-md-2 text-center">
+        <a href="#" class="servicelinks" target="blank" style="text-decoration: none; color: black;">
+            <img class="productImage" src="assets\img\Weight_Loss.png" class="mobile_images_width" width="120" height="120">
+            <br>
+            <p class="priceBox">Rs.500/month</p>
+        </a>
     </div>
-   </div>
-  <div class="services row justify-content-center">
+</div>    
+
+<div class="container queryForm" style="max-width: 600px; margin-bottom: 5px; background:#f7f3e9;" >
+    <br>
+    <form>
+        <div class="form-group">
+            <label for="planSelect">Select a plan</label>
+            <select onchange="changeProduct()" class="form-control" id="selectPlan">
+            </select>
+        </div>
+        <br>
+        <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+        </div>
+        <br>
+        <div class="form-group row">
+            <label for="contact" class="col-sm-2 col-form-label">Contact number</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="contact" placeholder="Enter your contact number" required>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address(optional)</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <br>    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
   </div>
-  <div class="text-center"><button onclick="loadmoreless()" type="button" class="btn btn-secondary loadmore">Load more</button></div>
-  <br>
-</div>
-</section>
-</div>
   <!--Footer starts-->
   <footer>
     <div class="footer container-fluid" >
