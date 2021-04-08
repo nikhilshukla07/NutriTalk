@@ -18,7 +18,7 @@
   <script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
   
   </head>
-<body>
+<body style="background:palegreen">
   
   
   
@@ -85,12 +85,12 @@
               <input type="number" class="form-control" id="contact" placeholder="Enter your contact number" required>
             </div>
         </div>
-        <br>
+        <!-- <br>
         <div class="form-group">
             <label for="exampleInputEmail1">Email address(optional)</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
+        </div> -->
         <br>    
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
@@ -157,7 +157,20 @@
     });
   });
 </script>
+<script>
+    const scriptURL =
+      "";
+    const form = document.forms["google-sheet"];
 
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then((response) => {
+            alert("Thanks for Contacting us..! We Will Contact You Soon...");
+        })
+        .catch((error) => console.error("Error!", error.message));
+    });
+  </script>
   <!--Footer ends-->
 </body>
 </html>

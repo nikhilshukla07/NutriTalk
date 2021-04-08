@@ -22,7 +22,7 @@ body{
     height: 550px;
 }
 .hero-image {
-        background-image: linear-gradient(rgba(217, 250, 233, 0.5), rgba(241, 243, 243, 0.5)), url('images/cover.jpg');
+    background-image: linear-gradient(rgba(217, 250, 233, 0.5), rgba(241, 243, 243, 0.5)), url('images/cover.jpg');
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
