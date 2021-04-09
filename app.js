@@ -88,6 +88,11 @@ var pricing=[
     500,
     500,
 ]
+function thankyou()
+{
+    window.location = "thankyou.html";
+
+}
 function changeProduct()
 {
     var e=document.querySelector("#selectPlan");
