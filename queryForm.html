@@ -65,24 +65,24 @@
 
 <div class="container queryForm" style="max-width: 600px; margin-bottom: 5px; background:#f7f3e9;" >
     <br>
-    <form>
+    <form id="test-form" name="google-sheet" method="post" id="join_form">
         <div class="form-group">
             <label for="planSelect">Select a plan</label>
-            <select onchange="changeProduct()" class="form-control" id="selectPlan">
+            <select onchange="changeProduct()" class="form-control" id="selectPlan" name="Service">
             </select>
         </div>
         <br>
         <div class="form-group row">
             <label for="name" class="col-sm-2 col-form-label">Name</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required name="Name">
             </div>
         </div>
         <br>
         <div class="form-group row">
             <label for="contact" class="col-sm-2 col-form-label">Contact number</label>
             <div class="col-sm-10">
-              <input type="number" class="form-control" id="contact" placeholder="Enter your contact number" required>
+              <input type="number" class="form-control" id="contact" placeholder="Enter your contact number" required name="Contact">
             </div>
         </div>
         <!-- <br>
@@ -92,7 +92,7 @@
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div> -->
         <br>    
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" id="submit-form" class="btn btn-primary">Submit</button>
   </form>
   </div>
   <!--Footer starts-->
@@ -157,20 +157,44 @@
     });
   });
 </script>
-<script>
-    const scriptURL =
-      "";
-    const form = document.forms["google-sheet"];
 
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      fetch(scriptURL, { method: "POST", body: new FormData(form) })
-        .then((response) => {
-            alert("Thanks for Contacting us..! We Will Contact You Soon...");
-        })
-        .catch((error) => console.error("Error!", error.message));
-    });
-  </script>
-  <!--Footer ends-->
+<!-- <script>
+  var $form = $('form#test-form'),
+    url = 'https://script.google.com/macros/s/AKfycbwS0EKgTfbQmriQ_-De7DQf-H3oTyb1iBQwSZk9MrieA2G-j8NC6lyQsRMOGKooioOg/exec'
+
+$('#submit-form').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(
+    // do something
+  );
+})
+</script> -->
+<script>
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbx8VkHvSI5h8-04HPU8sHP7t_84A2XDZu_2y_DSGDoG_LSQhGhHMCyD5L9fPVEoTAQ/exec"
+     const form = document.forms["google-sheet"];
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    fetch(scriptURL, { method: "POST", body: new FormData(form) })
+      .then((response) => {
+        var r = confirm("Confirm your details!");
+        if (r == true)
+          alert("Thanks for Contacting us..! We Will Contact You Soon...");
+      })
+      .catch((error) => console.error("Error!", error.message));
+  });
+</script>
+      <!-- <script>
+             function toggleSidebar(ref) {
+ref.classList.toggle('active');
+document.getElementById('sidebar').classList.toggle('active');
+}</script>  -->
+<!--Footer ends-->
 </body>
 </html>
