@@ -1,6 +1,6 @@
 
 
-
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 html{
@@ -50,22 +50,14 @@ body{
       height: 640px;
     }
     .hero-image {
-      /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/Pooja.jpg"); */
       background-image: url(\images\heromob.jpg);
-      height: 100%;
-      width: 100%;
-     
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
     }
   }
 footer{
   min-height:280px;
   padding: 2.5%;
   /* background: #045762; */
-  background:#008891;
+  background:#3cb549;
   color:white;
 }
 
@@ -122,13 +114,15 @@ footer{
     }
   }
 .about{
-  background: #008891;
-  min-height: 450px;
+  background: #3cb549;
+  min-height: 300px;
   color: white;
   text-align: center;
+  width: 100%;
 }
 .abouttext{
-  font-size: x-large;
+  font-size: large;
+  font-family: 'Bodoni Moda', serif;
 }
 .contact{
   height: 600px;
