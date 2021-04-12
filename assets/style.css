@@ -49,9 +49,9 @@ body{
     .hero{
       height: 640px;
     }
-    .hero-image {
+    /* .hero-image {
       background-image: url(\images\heromob.jpg);
-    }
+    } */
   }
 footer{
   min-height:280px;
