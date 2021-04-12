@@ -43,15 +43,22 @@ body{
 } */
   @media only screen and (max-width: 768px) {
     /* For mobile phones: */
-    .hero-text{
+    /* .hero-text{
         top:400px;
-    }
-    .hero{
-      height: 640px;
-    }
-    /* .hero-image {
-      background-image: url(\images\heromob.jpg);
     } */
+    /* .hero{
+      height: 640px;
+    } */
+    .hero-image {
+      background-image: url(images/pooja2.jpg);
+      height: 100%;
+      width: 100%;
+      
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: relative;
+    }
   }
 footer{
   min-height:280px;
