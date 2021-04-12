@@ -109,9 +109,9 @@ footer{
     .navs{
       margin: 0;
     }
-    .about{
+    /* .about{
      margin-bottom: -15px; 
-    }
+    } */
   }
 .about{
   background: #3cb549;
