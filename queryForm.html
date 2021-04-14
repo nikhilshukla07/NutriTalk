@@ -92,7 +92,7 @@
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div> -->
         <br>    
-    <button type="submit" id="submit-form" onclick="thankyou()" class="btn btn-primary">Submit</button>
+    <button type="submit" id="submit-form" class="btn btn-primary">Submit</button> <p>Wait for 2 seconds after submitting.</p>
   </form>
   </div>
    <!--Footer starts-->
@@ -186,7 +186,7 @@ $('#submit-form').on('click', function(e) {
     e.preventDefault();
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
       .then((response) => {
-        window.location = "thankyou.html";
+            alert("Thanks for Contacting us..! We Will Contact You Soon...");
       })
       .catch((error) => console.error("Error!", error.message));
   });
